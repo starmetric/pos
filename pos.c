@@ -10,7 +10,7 @@ int main(){
     scanf("%d", &select);
 
     if (select == 1) {
-        printf("\n\n\tProduct\nA / 10THB\nB / 25THB\nC / 60THB\n");
+        printf("\n\n\tProduct\nA / 10THB\nB / 25THB\nC / 60THB\nD / 110THB\n");
           printf("selectProduct = ");
           scanf("%s", product);
     }else if (select == 2) {
