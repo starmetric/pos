@@ -4,8 +4,9 @@
 int main(){
     
     int select;
+    int unitegg;
     char product[10];
-    char quantity[6];
+    //char quantity[6];
 
     printf("\tHello, welcome\n\n\tStarmetricshop\n\n[1]Productlist [2]Contactmembership [3]Exit\n");
     printf("select Number : ");
@@ -18,8 +19,8 @@ int main(){
           //printf("Required Quantity (6unit,200g) = ");
           //scanf("%s", quantity);
           if (strcmp(product, "egg")== 0) {
-              printf("Required Quantity (6unit) = ");
-              scanf("%s", quantity);
+              printf("Required Quantity (unit) = ");
+              scanf("%d", &unitegg);
 
           } 
     }else if (select == 2) {
