@@ -23,9 +23,12 @@ int main(){
               printf("Required Quantity (unit) = ");
               scanf("%d", &unit[0]);
               summit = unit[0] * 6;
-              printf("%s\n%d x 6 = %d THB\n", product, unit[0], summit);
+              printf("Total %s = %d THB\n", product, summit);
           }else if (strcmp(product, "pork")== 0) {
               printf("Required Quantity (g) = ");
+              scanf("%d", &unit[1]);
+              summit = (unit[1] * 46) / 100;
+              printf("Total %s = %d THB\n", product, summit);
           } 
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
