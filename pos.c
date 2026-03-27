@@ -7,11 +7,14 @@ int main(){
     int unit[4];
     int total;
     char product[10];
+    int running = 1;
 
     printf("\tHello, welcome\n\n\tStarmetricshop\n\n[1]Productlist [2]Contactmembership [3]Exit\n");
     printf("select Number : ");
     scanf("%d", &select);
 
+    while (running == 1) {
+    
     if (select == 1) {
         printf("\n\n\tProduct\negg / 6THB/1unit\npork / 46THB/100g\nfish / 28THB/100g\nduck / 68THB/100g\n");
           printf("Select Product = ");
@@ -40,8 +43,8 @@ int main(){
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
     }else 
-        printf("Thank you and see you again\n");
-
+        printf("Incorrect information. Please re-enter.\n");
+    }
 
     
     return 0;
