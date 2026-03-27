@@ -4,7 +4,7 @@
 int main(){
     
     int select;
-    int unit[5];
+    int unit[4];
     int summit;
     char product[10];
     //char quantity[6];
@@ -29,7 +29,17 @@ int main(){
               scanf("%d", &unit[1]);
               summit = (unit[1] * 46) / 100;
               printf("Total %s = %d THB\n", product, summit);
-          } 
+          }else if (strcmp(product, "fish")== 0) {
+              printf("Required Quantity (g) = ");
+              scanf("%d", &unit[2]);
+              summit = (unit[2] * 28) / 100;
+              printf("Total %s = %d THB\n", product, summit);
+          }else if (strcmp(product, "duck")== 0) {
+              printf("Required Quantity (g) = ");
+              scanf("%d", &unit[3]);
+              summit = (unit[3] * 68) / 100;
+              printf("Total %s = %d THB\n", product, summit);
+          }    
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
     }else 
