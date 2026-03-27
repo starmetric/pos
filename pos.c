@@ -5,6 +5,7 @@ int main(){
     
     int select;
     int unitegg;
+    int summit;
     char product[10];
     //char quantity[6];
 
@@ -21,7 +22,8 @@ int main(){
           if (strcmp(product, "egg")== 0) {
               printf("Required Quantity (unit) = ");
               scanf("%d", &unitegg);
-
+              summit = unitegg * 6;
+              printf("%s\n%d x 6 = %d THB\n", product, unitegg, summit);
           } 
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
