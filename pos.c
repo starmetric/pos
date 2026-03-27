@@ -14,7 +14,7 @@ int main(){
         printf("\n\n\tProduct\negg / 6THB/1unit\npork / 46THB/100g\nfish / 28THB/100g\nduck / 68THB/100g\n");
           printf("Select Product = ");
           scanf("%s", product);
-          printf("Required Quantity= ");
+          printf("Required Quantity (6unit,200g) = ");
           scanf("%s", quantity);
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
