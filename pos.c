@@ -16,7 +16,7 @@ int main(){
     if (select == 1) {
         printf("\n\n\tProduct\negg / 6THB/1unit\npork / 46THB/100g\nfish / 28THB/100g\nduck / 68THB/100g\n");
           printf("Select Product = ");
-          scanf("%s", product);
+          scanf("%7s", product);
           //printf("Required Quantity (6unit,200g) = ");
           //scanf("%s", quantity);
           if (strcmp(product, "egg")== 0) {
