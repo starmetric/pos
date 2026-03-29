@@ -1,16 +1,10 @@
 #include<stdio.h>
 #include<string.h>
 
-typedef struct {
-    char product[10];
-    float unit;
-    float total;
-} structvisit;
+typedef struct { char product[10]; float unit; float total;
+}structvisit;
 
-typedef struct {
-    char productstorage[10];
-    float price;
-    char unit[5];
+typedef struct {char productstorage[10]; float price; char unit[5];
 }storage;
 
 int main(){
@@ -19,11 +13,7 @@ int main(){
     
     int select;
 
-    storage menu[4] = {
-        {"beef", 98, "g"},
-        {"pork", 48, "g"},
-        {"fish", 28, "g"},
-        {"duck", 68, "g"},
+    storage menu[4] = { {"beef", 98, "g"}, {"pork", 48, "g"}, {"fish", 28, "g"}, {"duck", 68, "g"},
     };
     
     printf("\tHello, welcome\n\n\tStarmetricshop\n");
