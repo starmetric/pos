@@ -11,19 +11,19 @@ int main(){
     structvisit cart[10];
     int count = 0;
     
-    int select;
+    int selectmain;
 
     storage menu[4] = { {"beef", 98, "g"}, {"pork", 48, "g"}, {"fish", 28, "g"}, {"duck", 68, "g"},
     };
     
     printf("\tHello, welcome\n\n\tStarmetricshop\n");
 
-
+while (1) {
     printf("[1]Productlist [2]Contactmembership [3]Exit\n");
     printf("select Number : ");
-    scanf("%d", &select);
+    scanf("%d", &selectmain);
         
-    if (select == 1) {
+    if (selectmain == 1) {
 
         int found = 0; 
         while (!found) {  
@@ -49,6 +49,19 @@ int main(){
                 printf("Product not found. Please try again.\n");
             }  
         }
+    } else if (selectmain == 2) {
+          
+          int selectsocial;
+          
+          printf("[1]Contact [2]Membership [3]Back\n");
+          scanf("%d", &selectsocial);
+              if (selectsocial == 1) {
+                  printf("starmetric@inic.sh\n");
+              } else if (selectsocial == 2) {
+                  printf("aaabbbccc\n");
+              }
+    
     }
+  }
     return 0;
 }
