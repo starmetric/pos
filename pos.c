@@ -14,9 +14,10 @@ int main(){
     int select;
     int running = 1;
 
+    printf("\tHello, welcome\n\n\tStarmetricshop\n");
+
     while (running == 1){
 
-    printf("\tHello, welcome\n\n\tStarmetricshop\n");
     printf("[1]Productlist [2]Contactmembership [3]Exit\n");
     printf("select Number : ");
     scanf("%d", &select);
@@ -56,7 +57,10 @@ int main(){
             scanf("%d", &cart[count].unit);
             cart[count].total = (cart[count].unit * 68) / 100;
             printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
-          
+         
+        }else {
+            printf("Product not found.\n");
+            continue;
         }    
     
     }else if (select == 2) {
