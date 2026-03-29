@@ -38,31 +38,30 @@ int main(){
             printf("Required Quantity (unit) = ");
             scanf("%d", &cart[count].unit);
             cart[count].total = cart[count].unit * 6;
-            printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
           
         }else if (strcmp(cart[count].product, "pork")== 0) {
             printf("Required Quantity (g) = ");
             scanf("%d", &cart[count].unit);
             cart[count].total = (cart[count].unit * 46) / 100;
-            printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
          
         }else if (strcmp(cart[count].product, "fish")== 0) {
             printf("Required Quantity (g) = ");
             scanf("%d", &cart[count].unit);
             cart[count].total = (cart[count].unit * 28) / 100;
-            printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
           
         }else if (strcmp(cart[count].product, "duck")== 0) {
             printf("Required Quantity (g) = ");
             scanf("%d", &cart[count].unit);
             cart[count].total = (cart[count].unit * 68) / 100;
-            printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
          
         }else {
             printf("Product not found.\n");
             continue;
         }    
-    
+        printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
+        count++;
+
+
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
     
