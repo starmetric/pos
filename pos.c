@@ -16,10 +16,9 @@ int main(){
     storage menu[4] = { {"beef", 98, "g"}, {"pork", 48, "g"}, {"fish", 28, "g"}, {"duck", 68, "g"},
     };
     
-    printf("\tHello, welcome\n\n\tStarmetricshop\n");
-
 while (1) {
-    printf("[1]Productlist [2]Contactmembership [3]Exit\n");
+    printf("\n\n------------------Starmetric-POS-----------------\n\n");
+    printf("[1]Productlist [2]Contactmembership [3]Itemscart [4]Exit\n");
     printf("select Number : ");
     scanf("%d", &selectmain);
         
@@ -27,7 +26,7 @@ while (1) {
 
         int found = 0; 
         while (!found) {  
-        printf("\n\n--------------Product-------------\n\n");
+        printf("\n\n-----------------Product---------------\n\n");
         for (int i = 0; i < 4; i++) {
             printf("%s / %.2fTHB/%s\n", menu[i].productstorage, menu[i].price, menu[i].unit);  
         
@@ -53,14 +52,24 @@ while (1) {
           
           int selectsocial;
           
-          printf("[1]Contact [2]Membership [3]Back\n");
+          printf("\n\n[1]Contact [2]Membership [3]Back\n");
           scanf("%d", &selectsocial);
               if (selectsocial == 1) {
-                  printf("starmetric@inic.sh\n");
+                  printf("\n\nstarmetric@inic.sh\n");
               } else if (selectsocial == 2) {
-                  printf("aaabbbccc\n");
+                  printf("\n\naaabbbccc\n");
               } 
-    } else {
+    }else if (selectmain == 3) {
+        float grandtotal = 0;
+        printf("\n\n---------------Cart---------------\n");
+        for (int i = 0; i < count; i++) {
+             printf("%d. %s | %.2f g | %.2f THB\n", i + 1, cart[i].product, cart[i].unit, cart[i].total);
+             grandtotal += cart[i].total;
+        } 
+             printf("-----------------------------------\n\n");
+             printf("Grand Total = %.2f", grandtotal);
+    }
+    else {
         printf("Thank you for using the service.\n");
         break;
     }
