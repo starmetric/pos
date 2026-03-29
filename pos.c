@@ -59,8 +59,10 @@ while (1) {
                   printf("starmetric@inic.sh\n");
               } else if (selectsocial == 2) {
                   printf("aaabbbccc\n");
-              }
-    
+              } 
+    } else {
+        printf("Thank you for using the service.\n");
+        break;
     }
   }
     return 0;
