@@ -9,7 +9,8 @@ typedef struct {
 
     
 int main(){
-    structvisit v1;
+    structvisit cart[10];
+    int count = 0;
     int select;
     int running = 1;
 
@@ -20,29 +21,38 @@ int main(){
     scanf("%d", &select);
 
     if (select == 1) {
+        if(count == 10) {
+           printf("cart is full\n");
+           continue;
+        }
         printf("\n\n\tProduct\negg / 6THB/unit\npork / 46THB/100g\nfish / 28THB/100g\nduck / 68THB/100g\n");
           printf("Select Product = ");
-          scanf("%7s", v1.product);
-          if (strcmp(v1.product, "egg")== 0) {
+          scanf("%7s", cart[count].product);
+          
+          if (strcmp(cart[count].product, "egg")== 0) {
               printf("Required Quantity (unit) = ");
-              scanf("%d", &v1.unit);
-              v1.total = v1.unit * 6;
-              printf("Total %s = %d THB\n", v1.product, v1.total);
-          }else if (strcmp(v1.product, "pork")== 0) {
+              scanf("%d", &cart[count].unit);
+              cart[count].total = cart[count].unit * 6;
+              printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
+          
+          }else if (strcmp(cart[count].product, "pork")== 0) {
               printf("Required Quantity (g) = ");
-              scanf("%d", &v1.unit);
-              v1.total = (v1.unit * 46) / 100;
-              printf("Total %s = %d THB\n", v1.product, v1.total);
-          }else if (strcmp(v1.product, "fish")== 0) {
+              scanf("%d", &cart[count].unit);
+              cart[count].total = (cart[count].unit * 46) / 100;
+              printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
+         
+          }else if (strcmp(cart[count].product, "fish")== 0) {
               printf("Required Quantity (g) = ");
-              scanf("%d", &v1.unit);
-              v1.total = (v1.unit * 28) / 100;
-              printf("Total %s = %d THB\n", v1.product, v1.total);
-          }else if (strcmp(v1.product, "duck")== 0) {
+              scanf("%d", &cart[count].unit);
+              cart[count].total = (cart[count].unit * 28) / 100;
+              printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
+          
+          }else if (strcmp(cart[count].product, "duck")== 0) {
               printf("Required Quantity (g) = ");
-              scanf("%d", &v1.unit);
-              v1.total = (v1.unit * 68) / 100;
-              printf("Total %s = %d THB\n", v1.product, v1.total);
+              scanf("%d", &cart[count].unit);
+              cart[count].total = (cart[count].unit * 68) / 100;
+              printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
+          
           }    
     }else if (select == 2) {
         printf("\n\n[1]Contact [2]Membership\n");
