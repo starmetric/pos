@@ -7,13 +7,24 @@ typedef struct {
     int total;
 } structvisit;
 
-    
+typedef struct {
+    char productstorage[10];
+    int price;
+    char unit[5];
+}storage;
+
 int main(){
     structvisit cart[10];
     int count = 0;
     int select;
     int running = 1;
 
+    storage menu[4] = {
+        {"egg", 6, "unit"},
+        {"pork", 46, "g"},
+        {"fish", 28, "g"},
+        {"duck", 68, "g"},
+};
     printf("\tHello, welcome\n\n\tStarmetricshop\n");
 
     while (running == 1){
@@ -22,51 +33,19 @@ int main(){
     printf("select Number : ");
     scanf("%d", &select);
 
-    if (select == 1) {
-        if(count == 10) {
-           printf("cart is full\n");
-           continue;
-        }
-           printf("\n\n\tProduct\negg / 6THB/unit\n");
-           printf("pork / 46THB/100g\n");
-           printf("fish / 28THB/100g\n");
-           printf("duck / 68THB/100g\n");
-           printf("Select Product = ");
-           scanf("%7s", cart[count].product);
-          
-        if (strcmp(cart[count].product, "egg")== 0) {
-            printf("Required Quantity (unit) = ");
-            scanf("%d", &cart[count].unit);
-            cart[count].total = cart[count].unit * 6;
-          
-        }else if (strcmp(cart[count].product, "pork")== 0) {
-            printf("Required Quantity (g) = ");
-            scanf("%d", &cart[count].unit);
-            cart[count].total = (cart[count].unit * 46) / 100;
-         
-        }else if (strcmp(cart[count].product, "fish")== 0) {
-            printf("Required Quantity (g) = ");
-            scanf("%d", &cart[count].unit);
-            cart[count].total = (cart[count].unit * 28) / 100;
-          
-        }else if (strcmp(cart[count].product, "duck")== 0) {
-            printf("Required Quantity (g) = ");
-            scanf("%d", &cart[count].unit);
-            cart[count].total = (cart[count].unit * 68) / 100;
-         
-        }else {
-            printf("Product not found.\n");
-            continue;
-        }    
-        printf("Total %s = %d THB\n", cart[count].product, cart[count].total);
-        count++;
+    //if (select == 1) {
+    //    if(count == 10) {
+    //       printf("cart is full\n");
+    //      continue;
+    //    }
+    for (int i = 0; i < 4; i++)
+        printf("%s / %dTHB/%s\n", menu[i].productstorage, menu[i].price, menu[i].unit);
 
-
-    }else if (select == 2) {
-        printf("\n\n[1]Contact [2]Membership\n");
-    
-    }else 
-        printf("Incorrect information. Please re-enter.\n");
+    //}else if (select == 2) {
+    //    printf("\n\n[1]Contact [2]Membership\n");
+    //
+    //}else 
+    //    printf("Incorrect information. Please re-enter.\n");
     }
 
     
