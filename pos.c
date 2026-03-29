@@ -40,11 +40,14 @@ int main(){
                     scanf("%f", &cart[count].unit);
                     cart[count].total = (cart[count].unit / 100) * menu[i].price;
                     printf("Total %s = %.2f THB\n", menu[i].productstorage, cart[count].total);
+                    found = 1;
+                    count++;
                     break;
                 }
             }
-        if (!found) {
-        }  
+            if (!found) {
+                printf("Product not found. Please try again.\n");
+            }  
         }
     }
     return 0;
